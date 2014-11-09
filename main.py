@@ -1,10 +1,22 @@
 import webapp2
 from src.controller.HomeContoller import HomePage
 from src.controller.SliderController import SliderWS
+from src.controller.WorkAdminController import WorkAdminCreate,WorkAdminEdit,AddPhotoTOCollection,MapPhotoToWork,AddWorkAttribute
+from src.controller.WorkController import WorkIcon,WorkBigImage,WorkThumbnailPhoto,WorkPhoto,WorkPage
 
-application = webapp2.WSGIApplication([
-    ('/', HomePage),
-    ('/sliderdata',SliderWS)    
+application = webapp2.WSGIApplication([    
+    ('/CreateWork',WorkAdminCreate),
+    ('/WorkIcon',WorkIcon),
+    ('/WorkBigImage',WorkBigImage),
+    ('/EditWork',WorkAdminEdit),
+    ('/sliderdata',SliderWS),
+    ('/AddPhoto',AddPhotoTOCollection),    
+    ('/Photo',WorkPhoto),
+    ('/Work',WorkPage),
+    ('/Thumbnail',WorkThumbnailPhoto),
+    ('/MapPhotoToWork',MapPhotoToWork),
+    ('/AddAttribute',AddWorkAttribute),
+    ('/', HomePage)
 ], debug=True)
 
 """def main():
