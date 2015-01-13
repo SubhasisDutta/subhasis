@@ -1,5 +1,6 @@
 import webapp2
 from src.controller.HomeContoller import HomePage
+from src.controller.ContactController import ContactModule
 from src.controller.SliderController import SliderWS
 from src.controller.WorkAdminController import WorkAdminCreate,WorkAdminEdit,AddPhotoTOCollection,MapPhotoToWork,AddWorkAttribute
 from src.controller.WorkController import WorkIcon,WorkBigImage,WorkThumbnailPhoto,WorkPhoto,WorkPage
@@ -13,6 +14,7 @@ application = webapp2.WSGIApplication([
     ('/AddPhoto',AddPhotoTOCollection),    
     ('/Photo',WorkPhoto),
     ('/Work',WorkPage),
+    ('/ContactMessage',ContactModule),
     ('/Thumbnail',WorkThumbnailPhoto),
     ('/MapPhotoToWork',MapPhotoToWork),
     ('/AddAttribute',AddWorkAttribute),
